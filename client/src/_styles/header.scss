@@ -1,0 +1,26 @@
+.header-main {
+  padding: 10px;
+  position: fixed;
+  bottom: 20px;
+  background: rgba($color: white, $alpha: 0.1);
+  color: white;
+  gap: 10px;
+  border-radius: 40px;
+  .icon {
+    width: 60px;
+    height: 60px;
+    background: rgba($color: white, $alpha: 0.1);
+    border-radius: 30px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    .icon-main {
+      font-size: 1.5rem;
+    }
+  }
+  .icon:hover {
+    background: royalblue;
+  }
+  #active {
+    background: royalblue;
+  }
+}
