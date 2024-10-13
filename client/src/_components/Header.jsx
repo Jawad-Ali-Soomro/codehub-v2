@@ -13,7 +13,7 @@ const Header = () => {
         <img src="/icons/fire.svg" alt="" className="icon-main" />
       </div>
       <div className="icon flex">
-        <img src="/icons/menu.svg" alt="" className="icon-main" />
+        <img src="/icons/code.svg" alt="" className="icon-main" />
       </div>
 
       <div className="icon flex">

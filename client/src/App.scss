@@ -18,3 +18,8 @@ body {
 .col {
   flex-direction: column;
 }
+
+img,
+button {
+  cursor: pointer;
+}
