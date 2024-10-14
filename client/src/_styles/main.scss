@@ -4,7 +4,7 @@
   z-index: 10000000;
   width: 100%;
   transition: 0.5s;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(65, 105, 225, 0.336);
   overflow: scroll;
   gap: 20px;
   .main {
@@ -12,7 +12,6 @@
     height: 100vh;
     position: absolute;
     bottom: 0;
-    overflow: scroll;
     animation: animate-top 500ms ease;
     .btn-close {
       position: absolute;
@@ -50,7 +49,7 @@
     width: 700px;
     position: absolute;
     top: 10vh;
-    left: 70px;
+    left: 100px;
     background: black;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 15px;
@@ -82,14 +81,56 @@
     }
   }
   .right-sect {
-    width: 450px;
-    height: 200px;
+    width: 420px;
+    height: 180px;
     background: black !important;
     border: 1px solid;
     position: absolute;
     top: 10vh;
-    right: 70px;
+    right: 90px;
     border-radius: 15px;
+    transition: 0.3s;
+    .profile {
+      border-bottom: 1px solid;
+      padding-bottom: 20px;
+      width: 350px;
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+      }
+      h1 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: white;
+        margin-left: 10px;
+      }
+      justify-content: space-between;
+      button {
+        width: 120px;
+        height: 40px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        font-size: 0.6rem;
+        font-weight: 600;
+        color: white;
+        text-transform: uppercase;
+      }
+    }
+    .icons {
+      width: 350px;
+      justify-content: space-between;
+      margin-top: 20px;
+      .icon {
+        width: 50px;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        color: white;
+      }
+    }
   }
   @keyframes animate-top {
     from {

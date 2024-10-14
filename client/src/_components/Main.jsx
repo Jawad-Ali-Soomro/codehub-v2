@@ -1,3 +1,14 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLink,
+  FaLinkedin,
+  FaTwitter,
+  FaWhatsapp,
+  FaXTwitter,
+} from "react-icons/fa6";
 import "../_styles/main.scss";
 
 const Main = ({ userId, postId, showMain, setShowPost }) => {
@@ -31,10 +42,38 @@ const Main = ({ userId, postId, showMain, setShowPost }) => {
           alt=""
         />
       </div>
-      <div
-        className="right-sect flex col"
-        onClick={(e) => e.stopPropagation()}
-      ></div>
+      <div className="right-sect flex col" onClick={(e) => e.stopPropagation()}>
+        <div className="profile flex">
+          <div className="flex">
+            <img
+              src="https://res.cloudinary.com/daily-now/image/upload/t_logo,f_auto/v1/logos/064efc4834bd43b987bcda02e8ad6709"
+              alt=""
+            />
+            <h1>John Doe</h1>
+          </div>
+          <button>Follow</button>
+        </div>
+        <div className="icons flex">
+          <div className="icon flex">
+            <FaFacebook />
+          </div>
+          <div className="icon flex">
+            <FaXTwitter />
+          </div>
+          <div className="icon flex">
+            <FaWhatsapp />
+          </div>
+          <div className="icon flex">
+            <FaLinkedin />
+          </div>
+          <div className="icon flex">
+            <FaInstagram />
+          </div>
+          <div className="icon flex">
+            <FaLink />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
