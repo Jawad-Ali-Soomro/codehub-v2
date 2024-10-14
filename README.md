@@ -2,9 +2,9 @@
 
 codehub version 2 under development
 
-![login page](./register.png.png)
-![onboard page](./onboard.png.png)
-![main page](./main.png.png)
+![login page](/register.png)
+![onboard page](/onboard.png)
+![main page](/main.png)
 
 **1: Clone the Repository**
 
