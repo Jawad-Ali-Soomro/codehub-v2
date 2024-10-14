@@ -29,3 +29,11 @@
     background: transparent;
   }
 }
+
+@media (max-width: 600px) {
+  .header-main {
+    flex-direction: row;
+    bottom: 20px;
+    left: calc(50% - 190px);
+  }
+}

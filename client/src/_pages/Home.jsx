@@ -1,7 +1,14 @@
+import { useState } from "react";
 import Header from "../_components/Header";
 import "../_styles/home.scss";
+import { BiChip } from "react-icons/bi";
+import { FaRegStar } from "react-icons/fa6";
+import { FiBookOpen } from "react-icons/fi";
+import Main from "../_components/Main";
 
 export default function Home() {
+  const [showFirst, setFirst] = useState(true);
+  const [showPost, setPost] = useState(false);
   const info = [
     {
       user_image: "https://avatars.githubusercontent.com/u/2479967?v=4",
@@ -81,7 +88,11 @@ export default function Home() {
         <div className="wrapper flex">
           {info.map((card) => {
             return (
-              <div className="card flex col" key={card.title}>
+              <div
+                className="card flex col"
+                key={card.title}
+                onClick={() => setPost(true)}
+              >
                 <div className="top flex">
                   {card.group_image ? (
                     <img src={card?.group_image} alt="" />
@@ -142,6 +153,52 @@ export default function Home() {
           })}
         </div>
       </div>
+      {showFirst ? (
+        <div className="first-time flex" onClick={() => setFirst(false)}>
+          <div
+            className="wrapper flex col"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h1>Welcome!</h1>
+            <p>
+              We want to collect some basic information from you to proceed!
+            </p>
+            <div className="inputs flex col">
+              <div className="input-wrap flex">
+                <label htmlFor="first_name">First Name</label>
+                <input type="text" />
+              </div>
+              <div className="input-wrap flex">
+                <label htmlFor="last_name">Last Name</label>
+                <input type="text" />
+              </div>
+            </div>
+            {/* <p style={{ textTransform: "capitalize", alignSelf: "flex-start" }}>
+              Experience Level
+            </p> */}
+            <div className="cards flex">
+              <div className="card flex col">
+                <FaRegStar />
+              </div>
+              <div className="card flex col">
+                <FiBookOpen />
+              </div>
+              <div className="card flex col">
+                <BiChip />
+              </div>
+            </div>
+            <button className="btn-confirm flex">Confirm</button>
+          </div>
+        </div>
+      ) : (
+        this
+      )}
+      <Main
+        userId={"random"}
+        postId={"random"}
+        showMain={showPost}
+        setShowPost={setPost}
+      />
     </div>
   );
 }

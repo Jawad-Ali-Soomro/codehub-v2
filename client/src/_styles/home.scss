@@ -82,3 +82,101 @@
     }
   }
 }
+
+.first-time {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: rgba($color: black, $alpha: 0.1);
+  z-index: 10000;
+  backdrop-filter: blur(10px);
+
+  .wrapper {
+    animation: animate 500ms linear;
+    background: #111;
+    padding: 30px;
+    border-radius: 15px;
+    color: white;
+    gap: 10px;
+    position: relative;
+    h1 {
+      font-size: 1.2rem;
+      font-weight: 900;
+    }
+    p {
+      font-weight: 400;
+      font-size: 0.6rem;
+      max-width: 250px;
+      text-align: center;
+      text-transform: lowercase;
+    }
+    .inputs {
+      gap: 10px;
+
+      margin-top: 20px;
+      .input-wrap {
+        position: relative;
+        margin-top: 10px;
+        input {
+          width: 250px;
+          height: 40px;
+          border: 1px solid #80808090;
+          background: transparent;
+          outline: none;
+          color: white;
+          padding-left: 20px;
+          border-radius: 10px;
+        }
+        label {
+          position: absolute;
+          padding: 0 10px;
+          background: #111;
+          font-size: 0.6rem;
+          font-weight: 600;
+          top: -7px;
+          left: 10px;
+        }
+      }
+    }
+    .cards {
+      width: 270px;
+      justify-content: space-between;
+      gap: 10px;
+      .card {
+        width: 90px;
+        height: 50px;
+        gap: 5px;
+        background: rgba($color: white, $alpha: 0.1);
+        border-radius: 15px;
+        cursor: pointer;
+        p {
+          text-transform: capitalize;
+          font-weight: 500;
+        }
+      }
+      .card:hover {
+        background: royalblue;
+      }
+    }
+    .btn-confirm {
+      width: 270px;
+      height: 45px;
+      background: royalblue;
+      border: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: white;
+      cursor: pointer;
+      border-radius: 15px;
+    }
+  }
+}
+
+@keyframes animate {
+  from {
+    scale: 0.8;
+  }
+  to {
+    scale: 1;
+  }
+}
