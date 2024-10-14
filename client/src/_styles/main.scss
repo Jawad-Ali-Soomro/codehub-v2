@@ -12,7 +12,7 @@
     height: 100vh;
     position: absolute;
     bottom: 0;
-    animation: animate-top 500ms ease;
+    animation: animate-main 500ms ease;
     .btn-close {
       position: absolute;
       top: 20px;
@@ -132,7 +132,7 @@
       }
     }
   }
-  @keyframes animate-top {
+  @keyframes animate-main {
     from {
       height: 0;
     }

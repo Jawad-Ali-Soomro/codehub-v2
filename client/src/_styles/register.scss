@@ -87,7 +87,6 @@
     .main {
       max-width: 350px;
       align-items: start;
-      margin-left: 100px;
       color: white;
       gap: 10px;
       h1 {
@@ -169,5 +168,15 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 600px) {
+  .left {
+    width: 0 !important;
+    overflow: hidden;
+  }
+  .right {
+    width: 100vw !important;
   }
 }
