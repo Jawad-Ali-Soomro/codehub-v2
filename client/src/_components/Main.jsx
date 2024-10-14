@@ -18,7 +18,7 @@ const Main = ({ userId, postId, showMain, setShowPost }) => {
       style={{ height: `${showMain ? "100vh" : "0vh"}` }}
       onClick={() => setShowPost(false)}
     >
-      <div className="main flex" onClick={(e) => e.stopPropagation()}>
+      <div className="main flex">
         <button className="btn-close flex" onClick={() => setShowPost(false)}>
           <div className="close-sect flex col">
             <div></div>
@@ -26,7 +26,11 @@ const Main = ({ userId, postId, showMain, setShowPost }) => {
           </div>
         </button>
       </div>
-      <div className="left-sect flex col" onClick={(e) => e.stopPropagation()}>
+      <div
+        className="left-sect flex col"
+        style={{ animation: `${showMain ? "animate-to-scale 1s ease" : ""}` }}
+        onClick={(e) => e.stopPropagation()}
+      >
         <h1>React Hooks vs. Redux in 2024</h1>
         <p>
           <span>TLDR</span>
@@ -42,7 +46,11 @@ const Main = ({ userId, postId, showMain, setShowPost }) => {
           alt=""
         />
       </div>
-      <div className="right-sect flex col" onClick={(e) => e.stopPropagation()}>
+      <div
+        className="right-sect flex col"
+        style={{ animation: `${showMain ? "animate-to-scale 1s ease" : ""}` }}
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className="profile flex">
           <div className="flex">
             <img
